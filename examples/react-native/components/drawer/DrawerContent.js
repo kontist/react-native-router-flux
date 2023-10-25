@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {StyleSheet, Text, View, ViewPropTypes} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { ViewPropTypes } from 'deprecated-react-native-prop-types';
 import Button from 'react-native-button';
-import {Actions} from 'react-native-router-flux';
+import { Actions } from 'react-native-router-flux';
 
 const styles = StyleSheet.create({
   container: {
@@ -45,7 +46,7 @@ class DrawerContent extends React.Component {
         <Button onPress={Actions.tab_4_1}>Switch to tab4</Button>
         <Button
           onPress={() => {
-            Actions.___tab_5({data: 'test!'});
+            Actions.___tab_5({ data: 'test!' });
           }}>
           Switch to tab5 with data
         </Button>

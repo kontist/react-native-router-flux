@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {StyleSheet, Text, View, ViewPropTypes} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { ViewPropTypes } from 'deprecated-react-native-prop-types';
 import Button from 'react-native-button';
-import {Actions} from 'react-native-router-flux';
+import { Actions } from 'react-native-router-flux';
 
 const propTypes = {
   name: PropTypes.string.isRequired,
@@ -27,18 +28,18 @@ const styles = StyleSheet.create({
 });
 
 class TabView extends React.Component {
-  state = {hideNavBar: false, hideTabBar: false};
+  state = { hideNavBar: false, hideTabBar: false };
 
   toggleNavBar = () => {
     this.setState(
-      prevState => ({hideNavBar: !prevState.hideNavBar}),
-      () => Actions.refresh({hideNavBar: this.state.hideNavBar}),
+      prevState => ({ hideNavBar: !prevState.hideNavBar }),
+      () => Actions.refresh({ hideNavBar: this.state.hideNavBar }),
     );
   };
 
   toggleTabBar = () => {
     this.setState(
-      prevState => ({hideTabBar: !prevState.hideTabBar}),
+      prevState => ({ hideTabBar: !prevState.hideTabBar }),
       () => {
         Actions.refresh(
           {
@@ -96,7 +97,7 @@ class TabView extends React.Component {
         </Button>
         <Button
           onPress={() => {
-            Actions.tab_5_1({data: 'test!'});
+            Actions.tab_5_1({ data: 'test!' });
           }}>
           Switch to tab5 with data
         </Button>
@@ -125,6 +126,7 @@ class TabView extends React.Component {
     );
   }
 }
+
 TabView.propTypes = propTypes;
 TabView.defaultProps = defaultProps;
 

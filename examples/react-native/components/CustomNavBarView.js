@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {StyleSheet, View, ViewPropTypes} from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { ViewPropTypes } from 'deprecated-react-native-prop-types';
 import Button from 'react-native-button';
-import {Actions} from 'react-native-router-flux';
+import { Actions } from 'react-native-router-flux';
 
 const propTypes = {
   name: PropTypes.string,
@@ -55,6 +56,7 @@ class TabView extends React.Component {
     );
   }
 }
+
 TabView.propTypes = propTypes;
 
 export default TabView;
